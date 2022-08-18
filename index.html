@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jordan Air</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__heart">
+        <ion-icon class="card__heart-icon" name="heart-outline"></ion-icon>
+      </div>
+      <div class="card__cart">
+        <ion-icon class="card__cart-icon" name="cart-outline"></ion-icon>
+      </div>
+      <div class="card__product">
+        <img
+          src="./assets/img/giay.png"
+          alt=""
+          class="card__product--white action"
+        />
+        <img src="./assets/img/red.png" alt="" class="card__product--red" />
+        <img src="./assets/img/black.png" alt="" class="card__product--black" />
+      </div>
+      <div class="card__title">Nike Jordan Air Mid</div>
+      <div class="card__price">799$</div>
+      <div class="card__size">
+        <h3>Size:</h3>
+        <span>37</span>
+        <span>38</span>
+        <span>39</span>
+        <span>40</span>
+        <span>41</span>
+        <span>42</span>
+      </div>
+      <div class="card__color">
+        <h3>Color:</h3>
+        <span class="card__color--white"></span>
+        <span class="card__color--red"></span>
+        <span class="card__color--black"></span>
+      </div>
+      <div class="card__action">
+        <button>buy now</button>
+        <button>add cart</button>
+      </div>
+    </div>
+    <script>
+      const whiteColor = document.querySelector(".card__color--white");
+      const white = document.querySelector(".card__product--white");
+      const blackColor = document.querySelector(".card__color--black");
+      const black = document.querySelector(".card__product--black");
+      const redColor = document.querySelector(".card__color--red");
+      const red = document.querySelector(".card__product--red");
+
+      whiteColor.onclick = function () {
+        white.classList.add("action");
+        red.classList.remove("action");
+        black.classList.remove("action");
+      };
+      blackColor.onclick = function () {
+        black.classList.add("action");
+        red.classList.remove("action");
+        white.classList.remove("action");
+      };
+      redColor.onclick = function () {
+        red.classList.add("action");
+        white.classList.remove("action");
+        black.classList.remove("action");
+      };
+    </script>
+  </body>
+</html>
